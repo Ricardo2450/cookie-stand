@@ -136,8 +136,8 @@ listItem3();
 let paris = {
   name: 'Paris',
   max: 38,
-  min:11,
-  avg: 3.7,
+  min:20,
+  avg: 2.3,
   dailyTotal: 0,
   hourSalesArray: [],
   getRandomCustomers: function () {
