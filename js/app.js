@@ -93,7 +93,7 @@ function listItem2() {
 listItem2();
 
 let dubai = {
-  name: 'dubai',
+  name: 'Dubai',
   max: 38,
   min:11,
   avg: 3.7,
@@ -131,4 +131,45 @@ function listItem3() {
     dubaiData.appendChild(listItem4);
 };
 listItem3();
+
+
+let paris = {
+  name: 'Paris',
+  max: 38,
+  min:11,
+  avg: 3.7,
+  dailyTotal: 0,
+  hourSalesArray: [],
+  getRandomCustomers: function () {
+    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  }
+};
+
+let parisDiv = document.createElement('div');
+parisDiv.setAttribute('id', 'parisDiv');
+document.getElementById('salesLocations').appendChild(parisDiv);
+let parisData = document.createElement('ul');
+parisData.innerText = `${paris.name} Data`;
+parisDiv.appendChild(parisData);
+
+for (let i = 0; i < hours.length; i++) {
+  let numberOfCookies = paris.getRandomCustomers() * paris.avg;
+  paris.hourSalesArray.push(Math.trunc(numberOfCookies));
+  paris.dailyTotal = paris.dailyTotal + numberOfCookies;
+  // console.log(numberOfCookies)
+};
+let parisList = document.getElementById('parisList')
+
+function listItem4() {
+  for (let i = 0; i < hours.length; i++) {
+    console.log(`${hours[i]}: ${paris.hourSalesArray[i]} cookies sold`);
+    let listItem4 = document.createElement('li');
+    listItem4.innerText = `${hours[i]}: ${paris.hourSalesArray[i]} cookies sold`;
+    parisData.appendChild(listItem4);
+  }
+  let listItem4 = document.createElement('li');
+    listItem4.innerText = `Total: ${Math.trunc(paris.dailyTotal)}`;
+    parisData.appendChild(listItem4);
+};
+listItem4();
 
