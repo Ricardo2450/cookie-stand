@@ -51,3 +51,43 @@ listItem();
 
 // console.log(listItem());
 // console.log(Math.trunc(seattle.dailyTotal))
+
+let tokyo = {
+  name: 'Tokyo',
+  max: 24,
+  min: 3,
+  avg: 1.2,
+  dailyTotal: 0,
+  hourSalesArray: [],
+  getRandomCustomers: function () {
+    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  }
+};
+
+let tokyoDiv = document.createElement('div');
+tokyoDiv.setAttribute('id', 'tokyoDiv');
+document.getElementById('salesLocations').appendChild(tokyoDiv);
+let tokyoData = document.createElement('ul');
+tokyoData.innerText = `${tokyo.name} Data`;
+tokyoDiv.appendChild(tokyoData);
+
+for (let i = 0; i < hours.length; i++) {
+  let numberOfCookies = tokyo.getRandomCustomers() * tokyo.avg;
+  tokyo.hourSalesArray.push(Math.trunc(numberOfCookies));
+  tokyo.dailyTotal = tokyo.dailyTotal + numberOfCookies;
+  // console.log(numberOfCookies)
+};
+let tokyoList = document.getElementById('tokyoList')
+
+function listItem2() {
+  for (let i = 0; i < hours.length; i++) {
+    // console.log(`${hours[i]}: ${tokyo.hourSalesArray[i]} cookies sold`);
+    let listItem2 = document.createElement('li');
+    listItem2.innerText = `${hours[i]}: ${tokyo.hourSalesArray[i]} cookies sold`;
+    tokyoData.appendChild(listItem2);
+  }
+  let listItem3 = document.createElement('li');
+    listItem3.innerText = `Total: ${Math.trunc(tokyo.dailyTotal)}`;
+    tokyoData.appendChild(listItem3);
+};
+listItem2();
