@@ -167,9 +167,48 @@ function listItem4() {
     listItem4.innerText = `${hours[i]}: ${paris.hourSalesArray[i]} cookies sold`;
     parisData.appendChild(listItem4);
   }
-  let listItem4 = document.createElement('li');
-    listItem4.innerText = `Total: ${Math.trunc(paris.dailyTotal)}`;
-    parisData.appendChild(listItem4);
+  let listItem5 = document.createElement('li');
+    listItem5.innerText = `Total: ${Math.trunc(paris.dailyTotal)}`;
+    parisData.appendChild(listItem5);
 };
 listItem4();
 
+let lima = {
+  name: 'Lima',
+  max: 16,
+  min:2,
+  avg: 4.6,
+  dailyTotal: 0,
+  hourSalesArray: [],
+  getRandomCustomers: function () {
+    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  }
+};
+
+let limaDiv = document.createElement('div');
+limaDiv.setAttribute('id', 'limaDiv');
+document.getElementById('salesLocations').appendChild(limaDiv);
+let limaData = document.createElement('ul');
+limaData.innerText = `${lima.name} Data`;
+limaDiv.appendChild(limaData);
+
+for (let i = 0; i < hours.length; i++) {
+  let numberOfCookies = lima.getRandomCustomers() * lima.avg;
+  lima.hourSalesArray.push(Math.trunc(numberOfCookies));
+  lima.dailyTotal = lima.dailyTotal + numberOfCookies;
+  // console.log(numberOfCookies)
+};
+let limaList = document.getElementById('limaList')
+
+function listItem5() {
+  for (let i = 0; i < hours.length; i++) {
+    console.log(`${hours[i]}: ${lima.hourSalesArray[i]} cookies sold`);
+    let listItem5 = document.createElement('li');
+    listItem5.innerText = `${hours[i]}: ${lima.hourSalesArray[i]} cookies sold`;
+    limaData.appendChild(listItem5);
+  }
+  let listItem6 = document.createElement('li');
+    listItem6.innerText = `Total: ${Math.trunc(lima.dailyTotal)}`;
+    limaData.appendChild(listItem6);
+};
+listItem5();
