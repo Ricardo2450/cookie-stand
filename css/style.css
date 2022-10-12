@@ -1,0 +1,24 @@
+tr {
+  margin-left: 1 rem;
+  list-style:square;
+  margin-bottom: 1rem;
+}
+
+table, td, th {
+  border: 1px solid rgb(112, 159, 165);
+
+}
+table {
+  margin: 1rem;
+}
+td, th {
+  padding: 1rem;
+}
+
+thead, th{
+font-weight: bold;
+}
+
+tfoot{
+  background-color:  rgba(112, 159, 165, .1);
+}
