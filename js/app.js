@@ -46,7 +46,7 @@ function renderTableHeader() {
     salesTable.appendChild(th);
   }
   let th2 = document.createElement('th');
-  th2.textContent = ' Daily Total';
+  th2.textContent = 'Total';
   salesTable.appendChild(th2);
 }
 
@@ -73,19 +73,37 @@ Locations.prototype.renderTableBody = function () {
 
 
 // total per hour for all locations
-Locations.prototype.renderTableFooter = function () {
+function renderTableFooter () {
+  let tr = document.createElement('tr');
+  salesTable.appendChild(tr);
+  let td = document.createElement('td');
+  td.textContent = 'Total';
+  tr.appendChild(td);
+  
+  
   for (let i = 0; i < hours.length; i++) {
-    let allTotals = 0;
-    for(let j = 0; j <locationsArray.length; j++){
-      allTotals += locationsArray[j.hourSalesArray[i]];
+    let hourTotal = 0;
+    for (let j = 0; j < locationsArray.length; j++) {
+      hourTotal += locationsArray[j].hourSalesArray[i];
     }
+    let hourTotalFooter = document.createElement('td');
+    hourTotalFooter.textContent = hourTotal ;
+    tr.appendChild(hourTotalFooter);
+    
+    
+    // console.log(hours[i] + '; ' + hourTotal);
   }
-  return allTotals
-  console.log(allTotals)
+  let footerDailyTotal = document.createElement('td');
+  let totalFooterSales = 0;
+  for (let i = 0; i < locationsArray.length; i++) {
+    totalFooterSales += locationsArray[i].dailyTotal;
+  }
+  footerDailyTotal.textContent = totalFooterSales;
+  tr.appendChild(footerDailyTotal);
 }
 
-renderTableHeader();
 
+renderTableHeader();
 
 
 // name, max, min, avg
@@ -111,6 +129,7 @@ let lima = new Locations('Lima', 16, 2, 4.6);
 // lima.generateCookiesSales();
 lima.renderTableBody();
 
+renderTableFooter();
 
 
 
