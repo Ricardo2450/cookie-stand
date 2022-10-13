@@ -22,3 +22,121 @@ font-weight: bold;
 tfoot{
   background-color:  rgba(112, 159, 165, .1);
 }
+
+
+header{
+  background-color:#f2b3a4;
+}
+
+header h1{
+  font-weight: bold;
+  font-size: x-large;
+  text-align: center;
+}
+
+header nav{
+  width: 960px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+header nav ul li{
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px;
+}
+
+nav img{
+  width: 200px;
+  height: 70px;
+}
+
+/* ul li{
+  margin-left: 50px;
+  padding: 10px;
+}
+
+ul{
+  margin-top: 1rem;
+}
+
+li{
+  margin-top: 100px;
+  top: -40px;
+} */
+
+main{
+  /* background-color:orange; */
+  width: 960px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+main img{
+  margin-bottom: 30px;
+}
+
+main article{
+  width: 450px;
+}
+
+
+main article section{
+  overflow: auto;
+  height: 370px;
+}
+
+main div{
+  height: 60px;
+}
+
+footer{
+  text-align: center;
+  width: auto;
+  height: 50px;
+} 
+footer img{
+  background-color:#8aa192 ;
+  width:960px;
+  display:inline-block;
+  height: 50px;
+}
+
+/* footer{
+
+  width: 960px;
+  margin: auto;
+  display: ;
+  justify-content: flex-start;
+  flex-direction: row;
+
+
+
+  background: #8aa192 ;
+  height: 50px;
+  width: auto;
+}
+
+footer img{
+  width: auto;
+  height: 50px;
+  float: inline-start;
+  display: inline-block;
+} */
+
+/* section div{
+  background-color: aqua;
+} */
+
+article div p{
+  background-color: #bfb4ae;
+  color:black ;
+  width: 90px;
+} 
