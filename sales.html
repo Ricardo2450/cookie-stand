@@ -4,47 +4,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/salesstyle.css">
   <title>Document</title>
 </head>
 <body>
   <header>
-    <h1>Salmon Cookie Sale</h1>
+    <h1>Pat's Salmon Cookie Sale</h1>
     <nav>
     <a href="index.html">Home page</a>
     </nav>
   </header>
   <main>
     <h2>Locations</h2>
+    <aside>
+      <form>
+        <fieldset>
+          <legend>Add a new store</legend>
+        <!-- one way to do it -->
+        <!-- <label for="'newStoreName">New store name</label> -->
+        <!-- <input id="storeName" type="text" placeholder="New Store name" name="'namestore"> -->
+        
+        <label>New store name
+          <input type="text" name="newStoreName" required>
+        </label>
+    
+
+        <label>Min cookie sales
+          <input type="number" name="mincookiesale" required>
+        </label>
+
+        <label>Max cookie sales
+          <input type="number" name="maxcookiesale" required>
+        </label>
+
+        <label>Avg cookie sales
+          <input type="number" name="avgcookiesale" required>
+        </label>
+      </fieldset>
+        <button type="submit">submit</button>
+      </form>
+    </aside>
     <table id="salesLocations">
     </table>
-    <!-- <table>
-      <tbody>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>1st fav</th>
-          <th>2nd fav</th>
-          <th>3rd fav</th>
-        </tr>
-      </thead>
-      <tr>
-        <td>Date</td>
-        <td>Date</td>
-        <td>Date</td>
-        <td>Date</td>
-      </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td>footer</td>
-          <td>footer</td>
-          <td>footer</td>
-          <td>footer</td>
-        </tr>
-      </tfoot>
-    </table>
-   -->
   </main>
   <footer>© Ricardo Soto-Fabela </footer>
   <script src="js/app.js" text="text/javascript"></script>

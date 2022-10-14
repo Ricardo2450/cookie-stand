@@ -1,0 +1,76 @@
+/* table CSS */
+
+tr {
+  margin-left: 1 rem;
+  list-style: square;
+  margin-bottom: 1rem;
+}
+
+table,
+td,
+th {
+  border: 1px solid rgb(112, 159, 165);
+  color: rgb(113, 42, 34);
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+
+}
+
+table {
+  margin: 1rem;
+}
+
+td,
+th {
+  padding: 1rem;
+}
+
+thead,
+th {
+  font-weight: bold;
+}
+
+tfoot {
+  background-color: rgba(112, 159, 165, .1);
+}
+
+
+/* Page CSS */
+
+
+header {
+  background-color: #f2b3a4;
+}
+
+header h1 {
+  text-align: center;
+  color: maroon;
+}
+
+
+body {
+  background-color: #e5c9b2;
+}
+
+footer {
+  text-align: center;
+  width: auto;
+  height: 50px;
+}
+  /* form style */
+
+   form {
+    width: 100%;
+    height: auto;
+    display: inline;
+  }
+
+  fieldset {
+    border: 2px double rgb(112, 159, 165);
+    font-size: medium;
+    text-transform: uppercase;
+
+  }
+
+  legend {
+    text-align: center;
+  }

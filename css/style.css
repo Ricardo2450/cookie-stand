@@ -1,29 +1,3 @@
-tr {
-  margin-left: 1 rem;
-  list-style:square;
-  margin-bottom: 1rem;
-}
-
-table, td, th {
-  border: 1px solid rgb(112, 159, 165);
-
-}
-table {
-  margin: 1rem;
-}
-td, th {
-  padding: 1rem;
-}
-
-thead, th{
-font-weight: bold;
-}
-
-tfoot{
-  background-color:  rgba(112, 159, 165, .1);
-}
-
-
 header{
   background-color:#f2b3a4;
 }
@@ -32,6 +6,7 @@ header h1{
   font-weight: bold;
   font-size: x-large;
   text-align: center;
+  color: maroon;
 }
 
 header nav{
@@ -55,22 +30,18 @@ nav img{
   height: 70px;
 }
 
-/* ul li{
-  margin-left: 50px;
-  padding: 10px;
+a:hover{
+  color: white
 }
 
-ul{
-  margin-top: 1rem;
-}
 
-li{
-  margin-top: 100px;
-  top: -40px;
-} */
+body{
+  background-color: #e5c9b2;
+  font-family:Georgia, 'Times New Roman', Times, serif ;
+  color: black;
+}
 
 main{
-  /* background-color:orange; */
   width: 960px;
   margin: 30px auto 0;
   display: flex;
@@ -87,6 +58,12 @@ main article{
   width: 450px;
 }
 
+article h3{
+  font-weight: bold;
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+}
+
 
 main article section{
   overflow: auto;
@@ -94,7 +71,9 @@ main article section{
 }
 
 main div{
+  width: 160px;
   height: 60px;
+  padding-top: 5px;
 }
 
 footer{
@@ -108,6 +87,14 @@ footer img{
   display:inline-block;
   height: 50px;
 }
+
+
+article div p{
+  background-color: #bfb4ae;
+  color:black ;
+  width: 90px;
+} 
+
 
 /* footer{
 
@@ -134,9 +121,3 @@ footer img{
 /* section div{
   background-color: aqua;
 } */
-
-article div p{
-  background-color: #bfb4ae;
-  color:black ;
-  width: 90px;
-} 
