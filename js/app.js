@@ -68,6 +68,10 @@ Locations.prototype.renderTableBody = function () {
   
 }
 
+// function elementMaker(){
+//   let trName = document.createElement()
+// }
+
 
 // total per hour for all locations
 function renderTableFooter () {
